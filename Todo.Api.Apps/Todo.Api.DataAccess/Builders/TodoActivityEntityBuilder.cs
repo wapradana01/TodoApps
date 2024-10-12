@@ -20,7 +20,11 @@ namespace Todo.Api.DataAccess.Builders
                 .HasMaxLength(100);
 
             builder
-                .Property(e => e.ActivityName)
+                .Property(e => e.ActivityTitle)
+                .HasMaxLength(150);
+
+            builder
+                .Property(e => e.ActivityDesc)
                 .HasMaxLength(500);
 
             builder

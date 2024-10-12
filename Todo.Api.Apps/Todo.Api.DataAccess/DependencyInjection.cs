@@ -16,7 +16,7 @@ namespace Todo.Api.DataAccess
             services.AddDbContext<ApplicationDbContext>(x => x.UseSqlite(
                 configuration.GetConnectionString("SqlLite"), (option) =>
                 {
-                    option.MigrationsAssembly("Finance.Expensia.DataAccess");
+                    option.MigrationsAssembly("Todo.Api.DataAccess");
                     option.CommandTimeout(60);
                     //option.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
                 }));
