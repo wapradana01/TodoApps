@@ -15,6 +15,7 @@ builder.AddHealthCheck();
 builder.Services.RegisterDataAccess(builder.Configuration);
 builder.Services.RegisterCore(builder.Configuration);
 builder.AddUserManagement();
+builder.WebHost.UseUrls("https://*:7244");
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
